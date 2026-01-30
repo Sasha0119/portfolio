@@ -1,0 +1,341 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Pooppins:wght@300;400;500;600;700;800;900&display=swap'); */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;   
+}
+body {
+    color:#ededed;
+    background:url(galaxy.jpg) no-repeat center/cover;
+    /* z-index: -1; */
+}
+.header {
+    position:fixed;
+    top:0; left:0;
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.logo {
+    font-size:25px;
+    color:#ededed;
+    text-decoration:none;
+    font-weight:600;
+}
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    z-index: 0;
+    transition: .3s;
+}
+.navbar a:hover,.navbar a.active {
+    color:#00abf0;
+}
+#contactBtn {
+    z-index: -3;
+}
+.home {
+    height: 90vh;
+    display:flex;
+    align-items:center;
+    padding:0 10%;
+}
+.home-content {
+    max-width:600px;
+    margin:20px 0 40px;
+}
+.home-content h1 {
+    font-size:56px;
+    font-weight:700;
+    line-height:1.2;
+}
+.home-content h3 {
+    font-size:32px;
+    font-weight:700;
+    color:#00abf0;
+}
+.home-content .btn-box {
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    width:345px;
+    height:50px;
+}
+.btn-box a {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:150px;
+    height:100%;
+    background:#00abf0;
+    border:2px solid #00abf0;
+    border-radius:8px;
+    font-size:19px;
+    color:#081b29;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:1px;
+    z-index:2;
+    overflow:hidden;
+    transition:.5s;
+}
+.btn-box a:hover {
+    color:#00abf0;
+    background:#081b29;
+}
+.home-sci {
+    position:absolute;
+    bottom:40px;
+    width:170px;
+    display:flex;
+    justify-content:space-between;
+}
+.home-sci a {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:40px;
+    height:40px;
+    border:2px solid #00abf0;
+    border-radius:50%;
+    font-size:20px;
+    color:#00abf0;
+    text-decoration:none;
+    transition:.5s;
+}
+.home-sci a:hover {
+    color:#081b29;
+    background:#00abf0;
+}
+.home-imgHover {
+    position:absolute;
+    top:0;
+    right:30px; 
+    width:500px;
+    height:100%;
+    background:transparent;
+    transition:3s;
+}
+.home-imgHover:hover {
+    opacity:.8;
+}
+
+.modal {
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%; 
+    background:rgba(0,0,0,0.5);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+.modal-content { 
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    width:320px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    text-align:center;
+    color:black;
+}
+.modal-content input, .modal-content textarea {
+    width:100%;
+    margin:8px 0;
+    padding:8px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+.modal-content button {
+    margin-top:10px;
+    padding:10px 16px;
+    background-color:#00abf0;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+.modal-content button:hover { 
+    background-color:#0090cc;
+}
+.close {
+    float:right;
+    font-size:20px;
+    cursor:pointer;
+    color:#999;
+}
+.close:hover {
+    color:black;
+}
+/* Phones & small tablets */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;              
+    background: #081b29;
+    padding: 15px 20px;
+  }
+  .navbar a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .home-content h1 {
+        font-size: 28px;
+    }
+  .home-content h3 {
+        font-size: 18px;
+    }
+  .btn-box {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.modal-content {
+  width: 90%;
+  max-width: 320px;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #ededed;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle { display: flex; }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: #081b29;
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+}
+
+#langBtn {
+  background: #00abf0;
+  color: #081b29;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #00abf0;
+}
+
+#langBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00abf0;
+}
+
+/* Dropdown */
+.lang-options {
+  display: none;
+  position: fixed;
+  top: 45px;
+  right: 0;
+  background: #081b29;
+  border: 1px solid #00abf0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,171,240,0.5);
+  overflow: hidden;
+}
+
+.lang-options button {
+  background: none;
+  color: #00abf0;
+  border: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang-options button:hover {
+  background: #00abf0;
+  color: #081b29;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #langBtn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .lang-options button {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+}
+
+/* ✨ Reveal Animation Layers */
+body::before,
+.header::before,
+.logo::before,
+.navbar::before,
+.home-content::before,
+.btn-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showRight 1s ease forwards;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ensure containers are positioned and sit above the overlay */
+.header, .logo, .navbar, .home-content, .btn-box {
+  position: relative;
+  overflow: hidden;
+  z-index: 1; /* make sure content is above the overlay */
+}
+
+/* staggered delays (tweak as you like) */
+body::before { animation-delay: 0.3s; }
+.header::before { animation-delay: 0.5s; }
+.logo::before { animation-delay: 0.7s; }
+.navbar::before { animation-delay: 0.9s; }
+.home-content::before { animation-delay: 1.2s; }
+.btn-box::before { animation-delay: 1.4s; }
+
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}

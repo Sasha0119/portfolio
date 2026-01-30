@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#" class="logo">Sasha</a>
+
+  <div class="menu-toggle" id="menuToggle">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <a href="#" class="active" id="Home">Uy</a>
+    <a href="projects.html" target="_blank" id="about">Men qatnashgan loyihalar</a>
+    <a href="#" id="kontaktLink">Kontakt</a>
+
+    <button id="langBtn">Til</button>
+    <div class="lang-options" id="langOptions">
+      <button data-lang="uz">O'zbekcha</button>
+      <button data-lang="en">English</button>
+      <button data-lang="ru">Русский</button>
+    </div>
+  </nav>
+</header>
+
+<section class="home">
+  <div class="home-content">
+    <h1 id="name">Salom Men Shohjahon Baxtiyorov</h1>
+    <h3 id="skill">Frontend web Dasturchi</h3>
+    <div class="btn-box">
+      <a href="#" id="contactBtn">Gaplashaylik</a>
+    </div>
+  </div>
+
+  <div class="home-sci">
+    <a href="https://github.com/Sasha0119" target="_blank"><i class='bx bxl-github'></i></a>
+    <a href="#"><i class='bx bxl-instagram'></i></a>
+    <a href="#"><i class='bx bxl-linkedin'></i></a>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="contactTitle">Men bilan bog'laning</h3>
+    <form id="contactForm">
+      <input type="text" id="nameInput" placeholder="Ism Familiyangiz" required />
+      <input type="number" id="contactInput" placeholder="Telefon raqamingiz" required />
+      <input type="email" id="emailInput" placeholder="Email pochtangiz" required />
+      <textarea id="messageInput" placeholder="Nima haqida gaplashamiz?" required></textarea>
+      <button type="submit" id="sendBtn">Yuborish</button>
+    </form>
+  </div>
+</div>
+
+<script src="portfolio.js"></script>
+</body>
+</html>
