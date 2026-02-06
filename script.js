@@ -19,8 +19,7 @@ document.getElementById("contactForm").addEventListener("submit", async (e)=>{
   const email = e.target.email.value;
   const message = e.target.message.value;
 
-  const botToken = "8337351504:AAHNNqQ1Ue4aD2_InyVu0woOCvwybblFXcQ"; 
-  const chatId = "1830045630";
+
   const text = `📩 Yangi Xabar:\n👤 Ism: ${name}\n📞 Raqami: ${contact}\n💬 Xati: ${message}\n✉️ Email: ${email}`;
   const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
